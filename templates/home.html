@@ -1,8 +1,40 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="home">
-    <h1>Run Chan makes your nights better</h1>
-<iframe width="560" height="315" src="https://vcdn18.spankbang.com/4/0/4081457-720p.mp4?st=xJvfeKnEXozxW9oD0mEmxw&e=1534010271" frameborder="0" scrolling="no" allowfullscreen></iframe>
-</figure>
-</section>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Order Execution Zerodha</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <form method="POST" id='basket-form' action="https://kite.trade/connect/basket">
+                    <fieldset>
+                        <caption>Click Submit to place orders</caption>
+                        <label for="api_key">APIKey</label>
+                        <input type="text" value='{{api_key}}' id="api_key" name="api_key">
+                        <label for="basket">Order Basket</label>
+                        <textarea id="basket" name="data">
+                            {{orders}}
+                        </textarea>
+                        <input class="button-primary" type="submit" value="Submit">
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <blockquote>
+            Last updated at {{date}}
+        </blockquote>
+    </div>
+
+
+</body>
+
+</html>
 {% endblock %}
